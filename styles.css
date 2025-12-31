@@ -60,6 +60,11 @@ nav .container {
     justify-content: center;
 }
 
+
+.mobile-cta-items {
+    display: none;
+}
+
 .nav-links a {
     color: #1a1a1a;
     text-decoration: none;
@@ -910,7 +915,20 @@ footer .container {
 @media (max-width: 768px) {
     .mobile-menu-btn {
         display: block;
+        position: relative;
+        margin-left: auto;
+        z-index: 1200;
+        padding: 0.5rem;
+        background: transparent;
+        border: none;
+        border-radius: 6px;
+        font-size: 1.6rem;
+        color: #1a1a1a;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-user-select: none;
+        user-select: none;
     }
+    
     .team-grid {
         grid-template-columns: 1fr;
     }
@@ -918,6 +936,40 @@ footer .container {
     .member-photo {
         width: 140px;
         height: 140px;
+    }
+
+    .nav-cta {
+        display: none;
+    }
+
+    .logo {
+        font-size: 1.1rem;
+        flex: 1;
+        min-width: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .mobile-menu-btn {
+        margin-left: 0.75rem;
+    }
+
+    .mobile-cta-items {
+        display: none;
+        width: 100%;
+        list-style: none;
+    }
+
+    .nav-links.active .mobile-cta-items {
+        display: block;
+    }
+
+    .mobile-cta-items .nav-btn {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        display: flex;
     }
 
     .nav-links {
@@ -932,29 +984,22 @@ footer .container {
         box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         transition: left 0.3s ease;
         justify-content: flex-start;
+        overflow-y: auto;
     }
 
     .nav-links.active {
         left: 0;
     }
 
-    .nav-cta {
-        flex-direction: column;
+    .nav-links li {
         width: 100%;
-        position: fixed;
-        bottom: 2rem;
-        left: 0;
-        padding: 0 2rem;
-        display: none;
+        text-align: center;
+        margin: 0.5rem 0;
     }
 
-    .nav-links.active ~ .nav-cta {
-        display: flex;
-    }
-
-    .nav-btn {
-        width: 100%;
-        justify-content: center;
+    .nav-links a {
+        display: block;
+        padding: 1rem;
     }
 
     .hero .container,
@@ -1001,5 +1046,4 @@ footer .container {
     .cta-section h2 {
         font-size: 1.75rem;
     }
-
 }
