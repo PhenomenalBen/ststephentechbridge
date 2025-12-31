@@ -911,6 +911,14 @@ footer .container {
     .mobile-menu-btn {
         display: block;
     }
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .member-photo {
+        width: 140px;
+        height: 140px;
+    }
 
     .nav-links {
         position: fixed;
@@ -993,4 +1001,5 @@ footer .container {
     .cta-section h2 {
         font-size: 1.75rem;
     }
+
 }
